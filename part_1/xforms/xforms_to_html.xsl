@@ -9,7 +9,7 @@
         <html lang="uk">
             <head>
                 <meta charset="UTF-8"/>
-                <title>Реєстрація до бібліотеки (HTML)</title>
+                <title>Babik Nikita Petrovych lab 4</title>
                 <link rel="stylesheet" href="styles.css" type="text/css"/>
                 <script>
                     function handleSubmit(event) {
@@ -27,12 +27,12 @@
                 </script>
             </head>
             <body>
-                <h2>Реєстрація до бібліотеки</h2>
+                <h2>Запис до бібліотеки</h2>
                 <form id="libraryForm" onsubmit="handleSubmit(event)">
                     <div class="form-group">
                         <xsl:apply-templates select="//xf:group/xf:*[not(self::xf:submit or self::xf:trigger)]"/>
                         <div class="button-group">
-                            <input type="submit" value="Зареєструвати"/>
+                            <input type="submit" value="Записатись"/>
                             <input type="button" value="Очистити" onclick="handleReset()"/>
                         </div>
                     </div>

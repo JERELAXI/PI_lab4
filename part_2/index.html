@@ -6,8 +6,8 @@
 	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<h2>Реєстрація до бібліотеки</h2>
-<form action="http://example.com/register" method="post">
+<h2>Запис до бібліотеки</h2>
+<form id="libraryForm" onsubmit="handleSubmit(event)">
 	<div class="form-group">
 		<div class="input-group">
 			<label for="firstname" class="label">Ім’я</label>
@@ -45,10 +45,19 @@
 		</div>
 		
 		<div class="button-group">
-			<input type="submit" value="Зареєструвати">
+			<input type="submit" value="Записатись">
 			<input type="reset" value="Очистити">
 		</div>
 	</div>
 </form>
+
+<h3>Збережені дані:</h3>
+<pre id="output"></pre>
+<div class="button-group">
+	<button onclick="readData()">Оновити дані</button>
+	<button onclick="deleteData()">Видалити дані</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>

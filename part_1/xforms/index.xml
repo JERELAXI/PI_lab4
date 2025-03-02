@@ -4,7 +4,7 @@
       xmlns:xf="http://www.w3.org/2002/xforms"
       xmlns:ev="http://www.w3.org/2001/xml-events">
     <head>
-        <title>Реєстрація до бібліотеки (XForms)</title>
+        <title>Babik Nikita Petrovych lab 4</title>
         <xf:model>
             <xf:instance>
                 <registration>
@@ -21,7 +21,7 @@
         <link rel="stylesheet" href="styles.css" type="text/css"/>
     </head>
     <body>
-        <h2>Реєстрація до бібліотеки</h2>
+        <h2>Запис до бібліотеки</h2>
         <xf:group class="form-group">
             <xf:input ref="/registration/firstname">
                 <xf:label>Ім’я</xf:label>
@@ -56,7 +56,7 @@
             </xf:select1>
 
             <xf:submit submission="submitForm">
-                <xf:label>Зареєструвати</xf:label>
+                <xf:label>Записатись</xf:label>
             </xf:submit>
             <xf:trigger>
                 <xf:label>Очистити</xf:label>
