@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<title>Babik Nikita Petrovych lab 4</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<h2>Реєстрація до бібліотеки</h2>
+<form action="http://example.com/register" method="post">
+	<div class="form-group">
+		<div class="input-group">
+			<label for="firstname" class="label">Ім’я</label>
+			<input type="text" id="firstname" name="firstname" required>
+		</div>
+		
+		<div class="input-group">
+			<label for="lastname" class="label">Прізвище</label>
+			<input type="text" id="lastname" name="lastname" required>
+		</div>
+		
+		<div class="input-group">
+			<label for="middlename" class="label">По батькові</label>
+			<input type="text" id="middlename" name="middlename" required>
+		</div>
+		
+		<div class="input-group">
+			<label for="address" class="label">Адреса</label>
+			<input type="text" id="address" name="address" required>
+		</div>
+		
+		<div class="input-group">
+			<label for="passport" class="label">Дані паспорта</label>
+			<input type="text" id="passport" name="passport" required>
+		</div>
+		
+		<div class="input-group">
+			<label class="label">Статус читача</label>
+			<div class="radio-group">
+				<input type="radio" id="new_reader" name="reader_status" value="new" required>
+				<label for="new_reader">Новий читач</label>
+				<input type="radio" id="existing_reader" name="reader_status" value="existing">
+				<label for="existing_reader">Існуючий читач</label>
+			</div>
+		</div>
+		
+		<div class="button-group">
+			<input type="submit" value="Зареєструвати">
+			<input type="reset" value="Очистити">
+		</div>
+	</div>
+</form>
+</body>
+</html>

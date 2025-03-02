@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xforms_to_html.xsl"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:xf="http://www.w3.org/2002/xforms"
+      xmlns:ev="http://www.w3.org/2001/xml-events">
+    <head>
+        <title>Реєстрація до бібліотеки (XForms)</title>
+        <xf:model>
+            <xf:instance>
+                <registration>
+                    <firstname value=""/>
+                    <lastname value=""/>
+                    <middlename value=""/>
+                    <address value=""/>
+                    <passport value=""/>
+                    <reader_status value="new"/>
+                </registration>
+            </xf:instance>
+            <xf:submission id="submitForm" method="post" action="https://example.com/register"/>
+        </xf:model>
+        <link rel="stylesheet" href="styles.css" type="text/css"/>
+    </head>
+    <body>
+        <h2>Реєстрація до бібліотеки</h2>
+        <xf:group class="form-group">
+            <xf:input ref="/registration/firstname">
+                <xf:label>Ім’я</xf:label>
+            </xf:input>
+
+            <xf:input ref="/registration/lastname">
+                <xf:label>Прізвище</xf:label>
+            </xf:input>
+
+            <xf:input ref="/registration/middlename">
+                <xf:label>По батькові</xf:label>
+            </xf:input>
+
+            <xf:input ref="/registration/address">
+                <xf:label>Адреса</xf:label>
+            </xf:input>
+
+            <xf:input ref="/registration/passport">
+                <xf:label>Дані паспорта</xf:label>
+            </xf:input>
+
+            <xf:select1 ref="/registration/reader_status">
+                <xf:label>Статус читача</xf:label>
+                <xf:item>
+                    <xf:label>Новий читач</xf:label>
+                    <xf:value>new</xf:value>
+                </xf:item>
+                <xf:item>
+                    <xf:label>Існуючий читач</xf:label>
+                    <xf:value>existing</xf:value>
+                </xf:item>
+            </xf:select1>
+
+            <xf:submit submission="submitForm">
+                <xf:label>Зареєструвати</xf:label>
+            </xf:submit>
+            <xf:trigger>
+                <xf:label>Очистити</xf:label>
+                <xf:action ev:event="DOMActivate">
+                    <xf:rebuild/>
+                    <xf:recalculate/>
+                    <xf:refresh/>
+                    <xf:reset/>
+                </xf:action>
+            </xf:trigger>
+        </xf:group>
+    </body>
+</html>
